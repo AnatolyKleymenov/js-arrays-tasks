@@ -12,9 +12,9 @@ export const getTheNearestLocation = (locations, point) => {
     return null;
   }
   const arr = [];
-  for(let i=0;i<locations.length;i++)
+  for(let item of locations)
   {
-    let [nameLoc, pointLoc] = locations[i];
+    let [nameLoc, pointLoc] = item;
     arr.push(getDistance(pointLoc, point));
   }
   let min = _.min(arr);
@@ -25,13 +25,5 @@ export const getTheNearestLocation = (locations, point) => {
     return locations[i];
     }
   }
-  // let minArr = Math.min(arr);
-  // for(let i=0;i<arr.length;i++)
-  // {
-  //   if(minArr === arr[i])
-  //   {
-  //     return locations[i];
-  //   }
-  // }
 }
 // END
