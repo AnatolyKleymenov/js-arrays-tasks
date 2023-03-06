@@ -26,5 +26,6 @@ export default getSameParity = (arrNumber) =>{
     }
 
     return newArr;
+    //изменение
 }
 // END
